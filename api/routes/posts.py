@@ -18,8 +18,13 @@ def get_posts(payload: Payload):
         "message": "There are hot topics now",
         "username": " Reddit Pulse Monitor",
         "event_name": "Trending Topics",
-    }  
-    keywords = [option for k in payload.settings if k["label"] == "Keywords" for option in k["options"]]
+    }
+    print(payload.settings)
+    keywords = [] 
+    for k in payload.settings:
+        if k["label"] == "Keywords":
+            keywords = k["default"].split(",") 
+    print(keywords)
     for post in reddit.subreddit("all").hot(limit=10):
         for keyword in keywords:
             if keyword.lower() in post.title.lower():
@@ -30,5 +35,6 @@ def get_posts(payload: Payload):
     
     data.update(message = "Wait for an hour", status="error")
     r = requests.post(payload.return_url, json=data)
+    return {"status": "error"}
 
     

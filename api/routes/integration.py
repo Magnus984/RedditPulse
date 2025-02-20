@@ -43,14 +43,14 @@ def get_integration_json(request: Request):
                     "label": "interval",
                     "type": "text",
                     "required": True,
-                    "default": "0 * * * *"
+                    "default": "* * * * *"
                 },
                 {
                     "label": "Keywords",
                     "type": "multi-select",
                     "description": "Select keywords to be notified of",
                     "required": True,
-                    "options": ["AI", "Machine Learning", "Deep Learning"]
+                    "default": "AI,Machine Learning,Deep Learning"
                 }
             ],
             "tick_url": f"{base_url}/tick",
