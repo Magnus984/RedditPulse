@@ -20,7 +20,6 @@ def get_posts(payload: Payload):
         "event_name": "Trending Topics",
     }
     keywords = [keyword for k in payload.settings if k["label"] == "Keywords" for keyword in k["default"]]
-    print(keywords)
     for post in reddit.subreddit("all").hot(limit=10):
         for keyword in keywords:
             if keyword.lower() in post.title.lower():
