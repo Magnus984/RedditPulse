@@ -1,4 +1,4 @@
-# Project Name
+# Reddit Pulse
 
 ## Introduction
 
