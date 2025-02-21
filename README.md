@@ -28,6 +28,10 @@ This project is a social monitoring tool integrated with the telex platform. It 
 3. Install dependencies using `pip install -r requirements.txt`.
 4. Run the application using `uvicorn main:app --reload`.
 
+## Deployment
+
+The application is deployed at [URL](https://redditpulse.onrender.com).
+
 ## Contribution
 
 We welcome contributions! Please fork the repository and submit a pull request for any enhancements or bug fixes.
