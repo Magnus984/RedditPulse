@@ -32,6 +32,16 @@ This project is a social monitoring tool integrated with the telex platform. It 
 
 The application is deployed at [URL](https://redditpulse.onrender.com).
 
+
+## Telex Integration
+
+  - Add the integration JSON URL in your telex organization
+  - configure the time interval and keyword settings
+
+
+## Screenshot
+![Screenshot of integration in telex channel](./docs/image.png)
+
 ## Contribution
 
 We welcome contributions! Please fork the repository and submit a pull request for any enhancements or bug fixes.
